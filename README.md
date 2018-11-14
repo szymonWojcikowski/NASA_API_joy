@@ -1,4 +1,4 @@
-# NASA_API_joy
+# NASA API joy
 Playground to use jQuery Ajax
 * use GET method for background and gallery
 * use beforeSend for preload effect
