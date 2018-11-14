@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: 'Share', cursive;
+    font-size: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.welcome {
+    line-height: 20vh;
+    text-align: center;
+    /*background-image: url("http://images-assets.nasa.gov/image/PIA22688/PIA22688~orig.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+.welcome h1 {
+    display: inline-block;
+    margin: 40vh auto;
+    font-size: 18vh;
+}
+
+.gallery {
+    height: initial;
+    position: relative;
+
+    line-height: 0;
+    -webkit-column-count: 6;
+    -webkit-column-gap:   0;
+    -moz-column-count:    6;
+    -moz-column-gap:      0;
+    column-count:         6;
+    column-gap:           0;
+}
+
+@media (max-width: 1200px) {
+    .gallery {
+        -moz-column-count:    4;
+        -webkit-column-count: 4;
+        column-count:         4;
+    }
+}
+@media (max-width: 1000px) {
+    .gallery {
+        -moz-column-count:    3;
+        -webkit-column-count: 3;
+        column-count:         3;
+    }
+}
+@media (max-width: 800px) {
+    .gallery {
+        -moz-column-count:    2;
+        -webkit-column-count: 2;
+        column-count:         2;
+    }
+}
+@media (max-width: 400px) {
+    .gallery {
+        -moz-column-count:    1;
+        -webkit-column-count: 1;
+        column-count:         1;
+    }
+}
+
+.gallery img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-more {
+    font-family: 'Share', cursive;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.loader {
+    display: inline-block;
+    padding-top: 20vh;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background-color: rgba(0,0,0,.3);
+    color: red;
+}
+
+.loader:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 0% auto;
+    box-sizing: border-box;
+    border: 26px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
